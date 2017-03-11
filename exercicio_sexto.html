@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<input type="text" id="numero" />
+<input type="submit" value="compare com o meu segredo!" id="adivinhar" />
+
+<script>
+
+var segredos = [];
+
+
+var botaoClicado = function(){
+  var numero = document.getElementById("numero").value;
+ 
+ for(var i=0;i<segredos.length;i++){
+      if(segredos[i] == numero){
+	     alert("Numero repetido!");
+         return;		 
+	  }
+    }	
+	segredos.push(numero);
+	console.log(segredos);
+
+	 
+};
+var botaAdivinhar = document.getElementById("adivinhar");
+botaAdivinhar.onclick = botaoClicado;
+
+
+</script>

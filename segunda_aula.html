@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+
+var pularlinha = function(){
+    document.write("<br>");
+};
+var mostrar = function(frase){
+    document.write(frase);
+	pularlinha();
+	pularlinha();
+};
+
+var ano = 2016;
+mostrar("Eu nasci em: " + (ano-22));
+mostrar("Adriano nasceu em: " + (ano-26));
+mostrar("Paulo nasceu em: " + (ano-32));
+
+var eu = 21;
+var adriano = 26;
+var paulo = 32;
+
+var total = eu + adriano + paulo;
+var media = total / 3;
+mostrar("A soma das idades é: "+ total);
+mostrar("A média das idades é: " + Math.round(media));
+
+console.log("Mensagem que só aparece no console JavaScript, só aparece para o desenvolvedor");
+
+
+</script> 

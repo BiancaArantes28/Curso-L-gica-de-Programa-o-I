@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+var sorteio = [];
+var chute = [];
+var acertos = 0;
+for(var i=0;i<6;i++){
+    var numeroDecimais = Math.random()*60;
+	var numero = Math.round(numeroDecimais);
+	sorteio.push(numero);
+}
+for(var i=0;i<6;i++){
+   document.write(sorteio[i] + "<br>");
+}
+for(var i=0;i<6;i++){
+    var digitado = parseInt(prompt("Digite número."));
+	chute.push(digitado);
+	
+}
+for(var i=0;i<6;i++){
+    if(sorteio[i] == chute[i]){
+	   acertos = acertos+1;
+	   
+	}
+}
+
+document.write("Você acertou: " + acertos + " números");
+
+</script>

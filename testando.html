@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<input type="text" id="numero" />
+<input type="submit" value="Tente advinhar o número!" id="verificar" />
+
+<script>
+
+var sorteados = [2,4,6,8,10];
+var numero = document.getElementById("numero");
+
+var botaoClicado = function(){
+    
+	var achou = false;
+	for(var i=0;i<sorteados.length;i++){
+	   if(sorteados[i] == numero.value){
+	      achou = true;
+		  break;
+	   }
+	}
+	if(achou == true){
+	   alert("Parabens! Você achou um dos número secretos!");
+	}else{
+	   alert("Infelizmente você não achou!");
+	}
+}
+
+var botaoVerificar = document.getElementById("verificar");
+botaoVerificar.onclick = botaoClicado;
+
+
+</script>
